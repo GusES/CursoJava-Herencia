@@ -4,10 +4,13 @@ import java.util.Date;
 
 public class Cliente extends Persona {
 
-    private int idCliente = ++Cliente.contadorEmpleado;
-    private Date fechaRegistro;
+    private int idCliente = ++Cliente.contador;
+    private Date fechaRegistro = new Date();
     private boolean vip;
-    private static int contadorEmpleado;
+    private static int contador;
+
+    public Cliente() {
+    }
 
     public Cliente(Date fechaRegistro, boolean vip) {
         this.fechaRegistro = fechaRegistro;
@@ -44,6 +47,7 @@ public class Cliente extends Persona {
         sb.append("Cliente{idCliente=").append(idCliente);
         sb.append(", fechaRegistro=").append(fechaRegistro);
         sb.append(", vip=").append(vip);
+        sb.append(", ").append(super.toString());
         sb.append('}');
         return sb.toString();
     }
