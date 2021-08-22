@@ -4,15 +4,14 @@ import java.util.Date;
 
 public class Cliente extends Persona {
 
-    private int idCliente = ++Cliente.contador;
+    private int idCliente;
     private Date fechaRegistro = new Date();
     private boolean vip;
-    private static int contador;
+    private static int contadorCliente;
 
-    public Cliente() {
-    }
-
-    public Cliente(Date fechaRegistro, boolean vip) {
+    public Cliente(String nombre, char genero, int edad, String direccion, Date fechaRegistro, boolean vip) {
+        super(nombre, genero, edad, direccion);
+        this.idCliente = ++Cliente.contadorCliente;
         this.fechaRegistro = fechaRegistro;
         this.vip = vip;
     }
