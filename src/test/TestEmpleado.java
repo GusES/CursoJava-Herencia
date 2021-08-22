@@ -8,7 +8,7 @@ public class TestEmpleado {
         Empleado e1 = new Empleado("Juan", 5000);
         System.out.println(e1);
         
-        Empleado e2 = new Empleado("Juan", 5000);
+        Empleado e2 = new Empleado("Clara", 4000);
         System.out.println(e2);
     }
 }
